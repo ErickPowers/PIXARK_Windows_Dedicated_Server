@@ -8,4 +8,5 @@ This utility does 3 things
 3. Creates the Batch file for Launching. (optional desktop shortcut)
  
  
-Download the current build: https://github.com/ErickPowers/PIXARK_Windows_Dedicated_Server/raw/master/PixArk_Dedicated_Windows/bin/Debug/app.publish/PixArk_Dedicated_Windows.exe
+Download the current Release Beta 0.2 here: 
+https://github.com/ErickPowers/PIXARK_Windows_Dedicated_Server/releases/tag/0.2
