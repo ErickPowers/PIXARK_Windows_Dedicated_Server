@@ -57,6 +57,11 @@ namespace PixArk_Dedicated_Windows
         private void Completed(object sender, AsyncCompletedEventArgs e)
         {
             // blowup the screen with an annoyingly worded, and hard to read message!
+            string FilePath = PIXARKPATH + "\\" + PIXARKSRVNAME + "\\";
+            if (!Directory.Exists(FilePath))
+            {
+                Directory.CreateDirectory(FilePath);
+            }
             MessageBox.Show("STEAMCMD.zip has been downloaded to the following location: " + PIXARKPATH + "\\ " + "\n" + "Now Launching STEAMCMD and Downloading PIXARK " + "\n" + " *Please note that you need at least 4~ GB free space for this.");
             string filechecker = PIXARKPATH + "\\steamcmd\\" + "steamcmd.exe";
             if (System.IO.File.Exists(filechecker))
@@ -70,7 +75,7 @@ namespace PixArk_Dedicated_Windows
             string strCmdText; 
             StreamWriter w = new StreamWriter(PIXARKPATH + "\\steamcmd\\get_pixark.bat");
             w.WriteLine("\"" + PIXARKPATH + "\\steamcmd\\steamcmd.exe" + "\" " + "+exit");
-            w.WriteLine("\"" + PIXARKPATH + "\\steamcmd\\steamcmd.exe" + "\" " + "+login anonymous +force_install_dir " + "\""+ PIXARKPATH + "\\" + PIXARKSRVNAME + "\\"+"\"" + " +app_update 824360 validate +exit");
+            w.WriteLine("\"" + PIXARKPATH + "\\steamcmd\\steamcmd.exe" + "\" " + "+login anonymous +force_install_dir " + "\""+ PIXARKPATH + "\\" + PIXARKSRVNAME +"\"" + " +app_update 824360 validate +exit");
             w.WriteLine("exit");
             w.Close();
             strCmdText = PIXARKPATH + "\\steamcmd\\get_pixark.bat";
