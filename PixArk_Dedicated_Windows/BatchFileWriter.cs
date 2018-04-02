@@ -16,7 +16,7 @@ namespace PixArk_Dedicated_Windows
         // 
         public static void pixarkLauncher(string rootDIR, string PixArkSrv)
         {
-            string srvStart = "start \"\" /NORMAL \"" + rootDIR + "\\" + PixArkSrv + "\\ShooterGame\\Binaries\\Win64\\PixARKServer.exe\" \"CubeWorld_Light?listen?MaxPlayers=10?Port=27015?QueryPort=27016?RCONPort=27017?SessionName=" + PIXARKSRVNAME + "?ServerAdminPassword=YOURADMINPASSWORD?CULTUREFORCOOKING=en\" -NoBattlEye -NoHangDetection -CubePort=27018 -cubeworld=YOURWORLDNAME -Seed=YOURRANDOMSEED -nosteamclient -game -server -log";
+            //string srvStart = "start \"\" /NORMAL \"" + rootDIR + "\\" + PixArkSrv + "\\ShooterGame\\Binaries\\Win64\\PixARKServer.exe\" \"CubeWorld_Light?listen?MaxPlayers=10?Port=27015?QueryPort=27016?RCONPort=27017?SessionName=" + PIXARKSRVNAME + "?ServerAdminPassword=YOURADMINPASSWORD?CULTUREFORCOOKING=en\" -NoBattlEye -NoHangDetection -CubePort=27018 -cubeworld=YOURWORLDNAME -Seed=YOURRANDOMSEED -nosteamclient -game -server -log";
 
             // parameters that need to be set, need to be able to toggle srvServerPassword
 
@@ -40,11 +40,11 @@ namespace PixArk_Dedicated_Windows
             string srvWorldName;
 
             string srvParmBeginning = "start \"\" /NORMAL \"" + rootDIR + "\\" + PixArkSrv + "\\ShooterGame\\Binaries\\Win64\\PixARKServer.exe\" ";
-            string srvParmMiddle = "\"CubeWorld_Light?listen?" + srvMaxPlayers + "?" + srvPort + "?" + srvQueryPort + "?" + srvRCONPORT + "?" + srvSessionName + "?" + srvServerAdminPassword + "?" + srvCULTUREFORCOOKING + "\"";
-            string srvParmEnd = "";
-            StreamWriter w2 = new StreamWriter(PIXARKPATH + "\\" + PIXARKSRVNAME + "\\" + PIXARKSRVNAME + "_Server_Launcher.bat");
-            w2.WriteLine(srvStart);
-            w2.Close();
+//            string srvParmMiddle = "\"CubeWorld_Light?listen?" + srvMaxPlayers + "?" + srvPort + "?" + srvQueryPort + "?" + srvRCONPORT + "?" + srvSessionName + "?" + srvServerAdminPassword + "?" + srvCULTUREFORCOOKING + "\"";
+//            string srvParmEnd = "";
+//            StreamWriter w2 = new StreamWriter(PIXARKPATH + "\\" + PIXARKSRVNAME + "\\" + PIXARKSRVNAME + "_Server_Launcher.bat");
+//            w2.WriteLine(srvStart);
+//            w2.Close();
         }
     }
 }

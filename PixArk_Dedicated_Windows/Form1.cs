@@ -21,6 +21,12 @@ namespace PixArk_Dedicated_Windows
             InitializeComponent();
         }
         public String PIXARKPATH;
+        public String setGamePort;
+        public String setQueryPort;
+        public String setRCONPort;
+        public String setCubePort;
+        public String setSessionName;
+        public String setSeed;
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
         {
             using (var folderDialog = new FolderBrowserDialog())
@@ -82,7 +88,7 @@ namespace PixArk_Dedicated_Windows
             System.Diagnostics.Process.Start(strCmdText);
             button2.Enabled = true;
             // Create the launcher batch file
-            string srvStart = "start \"\" /NORMAL \"" + PIXARKPATH + "\\" + PIXARKSRVNAME + "\\ShooterGame\\Binaries\\Win64\\PixARKServer.exe\" \"CubeWorld_Light?listen?MaxPlayers=10?Port=27015?QueryPort=27016?RCONPort=27017?SessionName=" + PIXARKSRVNAME + "?ServerAdminPassword=YOURADMINPASSWORD?CULTUREFORCOOKING=en\" -NoBattlEye -NoHangDetection -CubePort=27018 -cubeworld=YOURWORLDNAME -Seed=YOURRANDOMSEED -nosteamclient -game -server -log";
+            string srvStart = "start \"\" /NORMAL \"" + PIXARKPATH + "\\" + PIXARKSRVNAME + "\\ShooterGame\\Binaries\\Win64\\PixARKServer.exe\" \"CubeWorld_Light?listen?MaxPlayers=10?Port=" + setGamePort + "?QueryPort="+ setQueryPort +"?RCONPort=" + setRCONPort + "?SessionName=" + setSessionName + "?ServerAdminPassword=YOURADMINPASSWORD?CULTUREFORCOOKING=en\" -NoBattlEye -NoHangDetection -CubePort=" + setCubePort + " -cubeworld=YOURWORLDNAME -Seed=" + setSeed + " -nosteamclient -game -server -log";
             StreamWriter w2 = new StreamWriter(PIXARKPATH + "\\" + PIXARKSRVNAME + "\\" + PIXARKSRVNAME + "_Server_Launcher.bat");
             w2.WriteLine(srvStart);
             w2.Close();
@@ -111,6 +117,27 @@ namespace PixArk_Dedicated_Windows
             {
                 button1.Enabled = false;
             }
+        }
+
+        // next four methods are to handle port changes. 
+        private void srvGamePort_TextChanged(object sender, EventArgs e)
+        {
+            setGamePort = srvGamePort.Text;
+        }
+
+        private void srvQueryPort_TextChanged(object sender, EventArgs e)
+        {
+            setQueryPort = srvQueryPort.Text;
+        }
+
+        private void srvRCONPort_TextChanged(object sender, EventArgs e)
+        {
+            setRCONPort = srvRCONPort.Text;
+        }
+
+        private void srvCubePort_TextChanged(object sender, EventArgs e)
+        {
+            setCubePort = srvCubePort.Text;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -164,6 +191,27 @@ namespace PixArk_Dedicated_Windows
         private void label2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Initialize the port variables
+            setGamePort = "27015";
+            setQueryPort = "27016";
+            setRCONPort = "27017";
+            setCubePort = "27018";
+            setSessionName = "JustAnotherServer";
+            setSeed = "12345";
+        }
+
+        private void srvSeed_TextChanged(object sender, EventArgs e)
+        {
+            setSeed = srvSeed.Text;
+        }
+
+        private void srvSessionName_TextChanged(object sender, EventArgs e)
+        {
+            setSessionName = srvSessionName.Text;
         }
     }
 }
