@@ -1,0 +1,33 @@
+﻿<Window x:Class="PixARCH.NewServerFrm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PixARCH"
+        mc:Ignorable="d"
+        Title="Create a New Server" Height="484.874" Width="493.277">
+    <Grid>
+        <Label Content="Enter a Name for The Server:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="198,13,0,0" TextWrapping="Wrap" Text="JustAnotherServer" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Enter a Seed for The Server:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="198,69,0,0" TextWrapping="Wrap" Text="12345" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Game Port:" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="198,97,0,0" TextWrapping="Wrap" Text="27015" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Select Where to Save The Server" HorizontalAlignment="Right" Margin="0,41,292,0" VerticalAlignment="Top" Width="183" Click="Button_Click" Height="23"/>
+        <Label Content="..........................................................................................." HorizontalAlignment="Left" Margin="198,41,0,0" VerticalAlignment="Top" Width="277" Height="23"/>
+        <Label Content="Query Port:" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="198,125,0,0" TextWrapping="Wrap" Text="27016" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+        <Label Content="RCON Port:" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="198,153,0,0" TextWrapping="Wrap" Text="27017" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+        <Label Content="cubeport:" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="198,181,0,0" TextWrapping="Wrap" Text="27018" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+        <CheckBox Content="Create a Desktop Shortcut" HorizontalAlignment="Left" Margin="127,293,0,0" VerticalAlignment="Top" Width="169"/>
+        <Label Content="RCON Password:" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="198,209,0,0" TextWrapping="Wrap" Text="YourServerAdminPassword" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Server Password:" HorizontalAlignment="Left" Margin="10,234,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="198,237,0,0" TextWrapping="Wrap" Text="YourPasswordHere" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>
+        <CheckBox Content="Enable Server Password" HorizontalAlignment="Left" Margin="127,273,0,0" VerticalAlignment="Top" Width="193"/>
+        <Button Content="Start Setup Process" HorizontalAlignment="Left" Margin="10,327,0,0" VerticalAlignment="Top" Width="465"/>
+
+    </Grid>
+</Window>

@@ -192,7 +192,7 @@ namespace PixArk_Dedicated_Windows
         {
 
         }
-
+        public String myIP;
         private void Form1_Load(object sender, EventArgs e)
         {
             //Initialize the port variables
@@ -204,6 +204,23 @@ namespace PixArk_Dedicated_Windows
             setSeed = "12345";
         }
 
+        private void getip()
+        {
+            //Get your public IP
+            myIP = IPINFO.Text; //-- your result
+            string url = "http://checkip.dyndns.org";
+            System.Net.WebRequest req = System.Net.WebRequest.Create(url);
+            System.Net.WebResponse resp = req.GetResponse();
+            System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
+            string response = sr.ReadToEnd().Trim();
+            string[] a = response.Split(':');
+            string a2 = a[1].Substring(1);
+            string[] a3 = a2.Split('<');
+            string a4 = a3[0];
+            IPINFO.Text = a4;
+            IPINFO.Refresh();
+            IPADDR.Visible = true;
+        }
         private void srvSeed_TextChanged(object sender, EventArgs e)
         {
             setSeed = srvSeed.Text;
@@ -212,6 +229,11 @@ namespace PixArk_Dedicated_Windows
         private void srvSessionName_TextChanged(object sender, EventArgs e)
         {
             setSessionName = srvSessionName.Text;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            getip();
         }
     }
 }

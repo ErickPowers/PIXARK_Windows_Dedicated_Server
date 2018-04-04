@@ -52,6 +52,9 @@
             this.srvSessionName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.srvSeed = new System.Windows.Forms.TextBox();
+            this.IPADDR = new System.Windows.Forms.Label();
+            this.IPINFO = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -106,13 +109,12 @@
             // button2
             // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(10, 445);
+            this.button2.Location = new System.Drawing.Point(12, 500);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(277, 23);
             this.button2.TabIndex = 7;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // desktopSC
@@ -128,7 +130,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(10, 429);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 472);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(264, 13);
             this.linkLabel1.TabIndex = 9;
@@ -138,7 +140,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(10, 368);
+            this.label2.Location = new System.Drawing.Point(10, 411);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 61);
             this.label2.TabIndex = 0;
@@ -273,11 +275,42 @@
             this.srvSeed.Text = "123456";
             this.srvSeed.TextChanged += new System.EventHandler(this.srvSeed_TextChanged);
             // 
+            // IPADDR
+            // 
+            this.IPADDR.AutoSize = true;
+            this.IPADDR.Location = new System.Drawing.Point(12, 387);
+            this.IPADDR.Name = "IPADDR";
+            this.IPADDR.Size = new System.Drawing.Size(118, 13);
+            this.IPADDR.TabIndex = 28;
+            this.IPADDR.Text = "Your Public IP Address:";
+            this.IPADDR.Visible = false;
+            // 
+            // IPINFO
+            // 
+            this.IPINFO.AutoSize = true;
+            this.IPINFO.Location = new System.Drawing.Point(136, 387);
+            this.IPINFO.Name = "IPINFO";
+            this.IPINFO.Size = new System.Drawing.Size(0, 13);
+            this.IPINFO.TabIndex = 29;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(13, 361);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(274, 23);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Get My Public IP";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 481);
+            this.ClientSize = new System.Drawing.Size(702, 547);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.IPINFO);
+            this.Controls.Add(this.IPADDR);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.srvSeed);
             this.Controls.Add(this.label8);
@@ -336,6 +369,9 @@
         private System.Windows.Forms.TextBox srvSessionName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox srvSeed;
+        private System.Windows.Forms.Label IPADDR;
+        private System.Windows.Forms.Label IPINFO;
+        private System.Windows.Forms.Button button3;
     }
 }
 
