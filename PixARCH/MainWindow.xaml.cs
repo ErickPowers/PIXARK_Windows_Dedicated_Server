@@ -27,22 +27,22 @@ namespace PixARCH
 
         private void bNewServer(object sender, RoutedEventArgs e)
         {
-            var newForm = new NewServerFrm(); //generate the new form
-            newForm.Show(); //show the new form.
-            this.Close(); //only if you want to close the current form.
+            var newForm = new NewServerFrm();
+            newForm.Show(); 
+            this.Close(); 
         }
 
         private void bModify(object sender, RoutedEventArgs e)
         {
-            var newForm = new ModifyFrm(); //create your new form.
-            newForm.Show(); //show the new form.
-            this.Close(); //only if you want to close the current form.
+            var newForm = new ModifyFrm(); 
+            newForm.Show(); 
+            this.Close(); 
         }
 
         private void bTroubleshoot(object sender, RoutedEventArgs e)
         {
-            var newForm = new TroubleshootFrm(); //create your new form.
-            newForm.Show(); //show the new form.
+            var newForm = new TroubleshootFrm(); 
+            newForm.Show();
         }
 
         private void bExit(object sender, RoutedEventArgs e)

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PixARCH"
         mc:Ignorable="d"
-        Title="Create a New Server" Height="484.874" Width="493.277">
+        Title="Create a New Server" Height="387.874" Width="493.277">
     <Grid>
         <Label Content="Enter a Name for The Server:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="183" HorizontalContentAlignment="Right"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="198,13,0,0" TextWrapping="Wrap" Text="JustAnotherServer" VerticalAlignment="Top" Width="277" TextChanged="TextBox_TextChanged"/>

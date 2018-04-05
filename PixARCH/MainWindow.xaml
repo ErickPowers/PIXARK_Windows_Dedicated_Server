@@ -7,14 +7,10 @@
         mc:Ignorable="d"
         Title="PixARCH - The PixARK Control Hub" Height="290.197" Width="337.254">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="32*"/>
-            <ColumnDefinition Width="193*"/>
-        </Grid.ColumnDefinitions>
+        <Label Content="PixArk Server Control Hub" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="309" Height="41" Grid.ColumnSpan="2"/>
         <Button Content="Create a New Server" HorizontalAlignment="Left" Height="39" Margin="10,73,0,0" VerticalAlignment="Top" Width="309" Grid.ColumnSpan="2" Click="bNewServer"/>
-        <Label Content="PixArk Server Control Hub" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Width="430" Height="41" Grid.ColumnSpan="2"/>
         <Button Content="Modify / Update Server" HorizontalAlignment="Left" Height="39" Margin="10,117,0,0" VerticalAlignment="Top" Width="309" Grid.ColumnSpan="2" Click="bModify"/>
-        <Button Content="Troubleshooting Tools" HorizontalAlignment="Left" Height="39" Margin="10,161,0,0" VerticalAlignment="Top" Width="309" Grid.ColumnSpan="2" Click="bTroubleshoot"/>
-        <Button Content="Exit" HorizontalAlignment="Left" Height="39" Margin="10,205,0,0" VerticalAlignment="Top" Width="309" Click="bExit" Grid.ColumnSpan="2"/>
+        <Button Content="Troubleshooting Tools" HorizontalAlignment="Left" Height="39" Margin="10,161,0,0" VerticalAlignment="Top" Width="309" Grid.ColumnSpan="2" Click="bTroubleshoot" Grid.RowSpan="2"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Height="39" Margin="10,205,0,0" VerticalAlignment="Top" Width="309" Click="bExit"/>
     </Grid>
 </Window>

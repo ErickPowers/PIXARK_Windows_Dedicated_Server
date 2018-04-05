@@ -26,7 +26,7 @@ namespace PixARCH
         String gServerName;
         String gServerDir;
         String gServerDirName;
-        String gServer
+        //String gServer
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
