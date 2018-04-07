@@ -33,16 +33,16 @@ namespace PixARCH
         }
 
         private void bModify(object sender, RoutedEventArgs e)
-        {
-            var newForm = new ModifyFrm(); 
-            newForm.Show(); 
+        {          
+            //var newForm = new ModifyFrm(); 
+            //newForm.Show(); 
             this.Close(); 
         }
 
         private void bTroubleshoot(object sender, RoutedEventArgs e)
         {
-            var newForm = new TroubleshootFrm(); 
-            newForm.Show();
+            //var newForm = new TroubleshootFrm(); 
+            //newForm.Show();
         }
 
         private void bExit(object sender, RoutedEventArgs e)
